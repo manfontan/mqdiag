@@ -1,10 +1,14 @@
 {
-  "name": "my-app",
+  "name": "mqdiag",
+  "author":{"name":"Manuel Fontan"},
+  "license": "Apache-2.0",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mongodb-stitch-browser-sdk": "^4.0.13",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-dropzone": "^6.0.2",
     "react-scripts": "2.0.4"
   },
   "scripts": {
@@ -21,5 +25,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }
