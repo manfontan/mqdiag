@@ -9,7 +9,7 @@ class App extends Component {
       <div className="mquery-diag-app">
         <DropArea />
         <div className="diag-list">
-          <Diagnostic diags={["Diagnostic 1","Recommendation 1","Diagnostic 2","Recommendation 2","And so on... This is a terrible mockup XD"]} />
+          <Diagnostic diags={[{"id":"1","name":"diagnostic 1","text":"fix this and that"},{"id":"2","name":"diagnostic 2","text":"fix some other things"},{"id":"3","name":"Mockup warning","text":"And so on... This is a terrible mockup XD"}]} />
         </div>
       </div>
     );

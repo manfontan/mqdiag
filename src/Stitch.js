@@ -8,7 +8,7 @@ client.auth.loginWithCredential(new AnonymousCredential()).then(user => {
 });
 
 export function uploadExplain(arg){
-  client.callFunction("postExplain", [arg]).then(echoedResult => {
-  console.log(`Echoed result: ${JSON.stringify(echoedResult)}`);
+  return client.callFunction("postExplain", [arg]).then(echoedResult => {
+    return JSON.stringify(echoedResult);
 })
 };

@@ -22,7 +22,7 @@ class DropArea extends React.Component {
           reader.onload = () => {
               var text = reader.result;
               //console.log(text)
-              stitch.uploadExplain(text);
+              stitch.uploadExplain(text).then(data => console.log(data));
               // do whatever you want with the file content
           };
           reader.onabort = () => console.log('file reading was aborted');

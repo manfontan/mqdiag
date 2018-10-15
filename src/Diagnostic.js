@@ -3,7 +3,7 @@ import React from 'react';
 function Diagnostic(props) {
   const diags = props.diags;
   const listItems = diags.map((diag) =>
-    <li>{diag}</li>
+    <li key={diag.id}>{diag.name+": "+diag.text}</li>
   );
   return (
     <div className="query-diags">
