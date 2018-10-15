@@ -1,14 +1,17 @@
 {
   "name": "mqdiag",
-  "author":{"name":"Manuel Fontan"},
+  "author": {
+    "name": "Manuel Fontan"
+  },
   "license": "Apache-2.0",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "mongodb-stitch-browser-sdk": "^4.0.13",
+    "mongodb-stitch-extjson": "^1.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-dropzone": "^6.0.2",
+    "react-dropzone": "^6.0.3",
     "react-scripts": "2.0.4"
   },
   "scripts": {
