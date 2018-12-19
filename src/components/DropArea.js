@@ -23,8 +23,8 @@ class DropArea extends React.Component {
           reader.onload = () => {
               var explainPlan = reader.result;
               stitch.uploadExplain(explainPlan).then(diags => {
-                const mockup = [{"label":"diag1","_id":1},{"label":"diag2","_id":2}]
-                for(let d of mockup){
+                //const mockup = [{"label":"diag1","_id":1},{"label":"diag2","_id":2}]
+                for(let d of diags){
                   addDiagnostic(d);
                 }
               });
