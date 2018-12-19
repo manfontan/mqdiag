@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone'
-import * as stitch from './Stitch';
+import * as stitch from '../Stitch';
+import {addDiagnostic} from '../flux/actions/diagnostics';
 
 class DropArea extends React.Component {
   constructor() {
@@ -20,10 +21,13 @@ class DropArea extends React.Component {
       acceptedFiles.forEach(file => {
           const reader = new FileReader();
           reader.onload = () => {
-              var text = reader.result;
-              //console.log(text)
-              stitch.uploadExplain(text).then(data => console.log(data));
-              // do whatever you want with the file content
+              var explainPlan = reader.result;
+              stitch.uploadExplain(explainPlan).then(diags => {
+                const mockup = [{"label":"diag1","_id":1},{"label":"diag2","_id":2}]
+                for(let d of mockup){
+                  addDiagnostic(d);
+                }
+              });
           };
           reader.onabort = () => console.log('file reading was aborted');
           reader.onerror = () => console.log('file reading has failed');
