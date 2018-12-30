@@ -1,5 +1,5 @@
 import EventEmitter from 'events';
-import d from '../dispacher';
+import d from '../dispatcher';
 import * as ACT from '../types';
 
 class DiagnosticsStore extends EventEmitter{
@@ -18,7 +18,11 @@ class DiagnosticsStore extends EventEmitter{
 
     diagnostics.push(diagnostic);
 
-    this.diagnostics = diagnostics.slice(0);
+    this.diagnostics = diagnostics;
+    this.emit('change');
+  }
+  deleteDiagnostics(){
+    this.diagnostics=[];
     this.emit('change');
   }
 
@@ -26,6 +30,9 @@ class DiagnosticsStore extends EventEmitter{
     switch(type){
       case ACT.ADD_DIAGNOSTIC:
       this.addDiagnostic(payload);
+      break;
+      case ACT.DEL_DIAGNOSTICS:
+      this.deleteDiagnostics();
       break;
       default:
       break;
