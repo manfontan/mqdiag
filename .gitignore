@@ -19,3 +19,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#stitch apps
+mqdiag-ryglf/
+
+##testing dbs
+/m32
+/m34
+
+##testing test plans
+/test-plans
