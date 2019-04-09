@@ -1,11 +1,11 @@
 import React from 'react';
 import Dropzone from 'react-dropzone'
-import * as stitchClient from '../stitch/StitchClient';
 import {addDiagnostic,deleteDiagnostics} from '../flux/actions/diagnostics';
 
 class DropArea extends React.Component {
-  constructor() {
+  constructor(props) {
     super()
+    this.client = props.client
     this.state = { files: [] }
   }
   render() {
@@ -22,14 +22,12 @@ class DropArea extends React.Component {
           const reader = new FileReader();
           reader.onload = () => {
               var explainPlan = reader.result;
-              stitchClient.uploadExplain(explainPlan).then(result => {
-                const diags = result.slice(0);
+
+              this.client.callFunction("postExplain", [explainPlan]).then(diagnostics => {
+                const diags = diagnostics.slice(0);
                 console.log(diags);
-                //TODO: removed monckup code
-                //const diags = [{"label":"Manuel is a glorious hacker","_id":1},{"label":"Chris is a mighty query performance sourcerer","_id":2},{"label":"Miguel is AWS certified SA lol","_id":3}]
                 deleteDiagnostics();
                 for(let d of diags[0]){
-                  //console.log(d);
                   addDiagnostic(d);
                 }
               });
