@@ -1,0 +1,12 @@
+{
+    "name": "diagnostics",
+    "value": {
+        "isQueryTargetingOk": {
+            "ok": "query targeting ratio is ok",
+            "bad": "your query targeting ratio is over 100 this is not good",
+            "needChange": "your query targeting ratio is over 1000 this is bad",
+            "missingIndex": "The query is not using an Index. Some of my best friends are indexes consider building one"
+        }
+    },
+    "from_secret": false
+}

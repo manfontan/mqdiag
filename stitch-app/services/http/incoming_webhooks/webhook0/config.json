@@ -1,0 +1,11 @@
+{
+    "name": "webhook0",
+    "run_as_user_id": "",
+    "run_as_user_id_script_source": "",
+    "options": {
+        "httpMethod": "POST",
+        "secret": "abc",
+        "validationMethod": "VERIFY_PAYLOAD"
+    },
+    "respond_result": false
+}

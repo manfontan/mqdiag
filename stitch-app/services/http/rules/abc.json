@@ -1,0 +1,10 @@
+{
+    "name": "abc",
+    "when": {
+        "%%args.url.host": {
+            "%in": [
+                "google.com"
+            ]
+        }
+    }
+}

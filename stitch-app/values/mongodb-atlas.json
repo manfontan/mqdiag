@@ -1,0 +1,5 @@
+{
+    "name": "mongodb-atlas",
+    "value": "mongodb-atlas",
+    "from_secret": false
+}

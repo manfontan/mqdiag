@@ -1,0 +1,9 @@
+{
+    "name": "queryDoctorWarehouse",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "queryDoctorWarehouse",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}

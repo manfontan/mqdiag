@@ -1,0 +1,9 @@
+{
+    "name": "atlasService",
+    "value": {
+        "name": "mongodb-atlas",
+        "db": "queryDoctor",
+        "collection": "explainPlan"
+    },
+    "from_secret": false
+}

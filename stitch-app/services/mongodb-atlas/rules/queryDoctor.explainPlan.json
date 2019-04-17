@@ -1,0 +1,25 @@
+{
+    "database": "queryDoctor",
+    "collection": "explainPlan",
+    "roles": [
+        {
+            "name": "owner",
+            "apply_when": {},
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "additional_fields": {}
+        }
+    ],
+    "schema": {
+        "properties": {
+            "_id": {
+                "bsonType": "objectId"
+            },
+            "owner_id": {
+                "bsonType": "string"
+            }
+        }
+    }
+}

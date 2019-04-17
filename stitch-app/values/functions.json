@@ -1,0 +1,9 @@
+{
+    "name": "functions",
+    "value": {
+        "startQueryDiagnostic": "startQueryDiagnostic",
+        "isQueryTargetingOk": "isQueryTargetingOk",
+        "isMultiKeyPathsIndex": "isMultiKeyPathsIndex"
+    },
+    "from_secret": false
+}
