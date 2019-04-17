@@ -1,5 +1,5 @@
 import React from 'react';
-import Diagnostic from './Diagnostic.js.js.js';
+import Diagnostic from './Diagnostic.js';
 import diagnosticsStore from '../flux/stores/diagnostics';
 
 export default class Diagnostics extends React.Component{
